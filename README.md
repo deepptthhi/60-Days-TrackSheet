@@ -3,7 +3,7 @@ This repository is dedicated to my upskilling journey, featuring coding practice
 
 
 ## What I'm doing
-Daily DSA + Python + Frontend + Backend + Databases + AI/Gen AI Fundamentals + Computer Fundamentals (OOPS, OS, DBMS, CN, System Design) + Cloud & DevOps (AWS, Docker, CI/CD pipelines) + 3 Projects.
+Daily DSA + Python + Frontend + Backend + Databases + AI/ML/Gen AI Fundamentals + Computer Fundamentals (OOPS, OS, DBMS, CN) + System Design + Cloud & DevOps (AWS, Docker, CI/CD pipelines) + 3 Projects.
 
 ## Links
 - DSA Practice (LeetCode): [https://leetcode.com/u/deepthimanjunath]
