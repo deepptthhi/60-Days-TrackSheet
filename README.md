@@ -10,4 +10,4 @@ Daily DSA + Python + Frontend + Backend + Databases + AI/ML/Gen AI Fundamentals 
 - LinkedIn: [https://www.linkedin.com/in/deepthimanjunath14]
 
 ## Daily Log
-See [LOG.md](./LOG.md)
+See [Learning-Log](./Learning-Log)
