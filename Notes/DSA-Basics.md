@@ -1,4 +1,4 @@
-# DSA
+
 
 # 1. What is DSA?
 
@@ -14,8 +14,6 @@ Learning DSA helps me write programs that are faster, more efficient, and easier
 - Helps solve problems efficiently.
 - Important for software development and coding interviews.
 
----
-
 # 2. Why Learn DSA?
 
 A program that gives the correct output isn't always the best program.
@@ -30,8 +28,6 @@ DSA helps me compare different solutions and choose the better one.
 - Helps write faster programs.
 - Helps reduce memory usage.
 - Important for coding interviews.
-
----
 
 # 3. Problem Solving
 
@@ -51,8 +47,6 @@ A good solution should be:
 - Think before writing code.
 - Choose the best solution.
 
----
-
 # 4. Algorithm
 
 An algorithm is a step-by-step procedure used to solve a problem.
@@ -70,8 +64,6 @@ Every program follows an algorithm.
 - Step-by-step solution.
 - Produces the required output.
 - Can have multiple approaches.
-
----
 
 # 5. Data Structure
 
@@ -94,7 +86,6 @@ Examples:
 - Improves efficiency.
 - Different problems use different data structures.
 
----
 
 # 6. Input & Output
 
@@ -125,8 +116,6 @@ Example:
 - Input → Data given to the program.
 - Output → Result produced by the program.
 
----
-
 # 7. Brute Force Solution
 
 A brute-force solution is the simplest way to solve a problem.
@@ -141,8 +130,6 @@ Although it works, it may not be the fastest solution.
 - Usually slower.
 - Good starting point.
 
----
-
 # 8. Better Solution
 
 A better solution improves the brute-force approach.
@@ -155,8 +142,6 @@ It reduces unnecessary work and improves performance.
 - Uses a smarter approach.
 - May still not be the best solution.
 
----
-
 # 9. Optimized Solution
 
 An optimized solution is the most efficient approach.
@@ -168,8 +153,6 @@ It tries to reduce both execution time and memory usage.
 - Fastest approach.
 - Uses resources efficiently.
 - Preferred for large inputs.
-
----
 
 # 10. Time Complexity
 
@@ -191,8 +174,6 @@ That's what Time Complexity helps answer.
 - Independent of computer speed.
 - Helps compare algorithms.
 
----
-
 # 11. Space Complexity
 
 Space Complexity tells me how much extra memory an algorithm needs.
@@ -204,8 +185,6 @@ Some algorithms use very little memory, while others require additional storage.
 - Measures memory usage.
 - Helps compare algorithms.
 - Lower memory usage is usually better.
-
----
 
 # 12. Asymptotic Analysis
 
@@ -219,7 +198,6 @@ Instead of testing with small inputs, it focuses on overall growth.
 - Used for large input sizes.
 - Doesn't depend on hardware.
 
----
 
 # 13. Big-O Notation (O)
 
@@ -233,8 +211,6 @@ It tells me the maximum amount of work an algorithm may need.
 - Most commonly used notation.
 - Helps compare algorithms.
 
----
-
 # 14. Big-Omega Notation (Ω)
 
 Big-Omega represents the **best-case performance**.
@@ -246,7 +222,6 @@ It shows the minimum amount of work an algorithm needs.
 - Best case.
 - Minimum running time.
 
----
 
 # 15. Big-Theta Notation (Θ)
 
@@ -257,7 +232,6 @@ Big-Theta represents the **average or expected performance** when the upper and 
 - Average case.
 - More precise than Big-O.
 
----
 
 # 16. Common Time Complexities
 
@@ -277,4 +251,3 @@ Big-Theta represents the **average or expected performance** when the upper and 
 - **O(n log n)** → Efficient sorting algorithms.
 - **O(n²)** → Usually caused by nested loops.
 
----
