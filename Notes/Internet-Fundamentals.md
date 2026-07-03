@@ -1,38 +1,4 @@
 
-## Table of Contents
-
-1. What is the Internet?
-2. What are Protocols?
-3. What is a Network?
-4. Types of Networks
-   - LAN (Local Area Network)
-   - MAN (Metropolitan Area Network)
-   - WAN (Wide Area Network)
-5. Internet Service Provider (ISP)
-6. Client & Server
-7. Browser
-8. Website vs Web Page
-9. Website vs Web Application
-10. URL (Uniform Resource Locator)
-11. Domain Name
-12. IP Address (Internet Protocol Address)
-    - IPv4
-    - IPv6
-    - Public IP vs Private IP
-13. DNS (Domain Name System)
-14. DNS Cache
-15. HTTP & HTTPS
-16. Why HTTPS is Important
-17. Request & Response
-18. TCP & UDP
-19. Ports
-20. Common Ports
-21. Cookies
-22. Sessions
-23. Cache
-24. CDN (Content Delivery Network)
-25. What Happens When I Type `google.com`?
-26. Summary
 
 # 1. What is the Internet?
 
@@ -48,7 +14,6 @@ Whenever I open a website, send an email, watch a YouTube video, or use an onlin
 - Allows devices to communicate.
 - Makes websites and online services possible.
 
----
 
 # 2. What are Protocols?
 
@@ -70,7 +35,7 @@ Examples of protocols are:
 - Different protocols have different jobs.
 - Without protocols, devices cannot communicate properly.
 
----
+
 
 # 3. What is a Network?
 
@@ -90,7 +55,7 @@ The Internet is the largest network in the world.
 - Allows devices to share information.
 - Can be small or very large.
 
----
+
 
 # 4. Types of Networks
 
@@ -104,13 +69,12 @@ Examples:
 - Office
 - School
 
----
 
 ## MAN (Metropolitan Area Network)
 
 Connects devices across a city.
 
----
+
 
 ## WAN (Wide Area Network)
 
@@ -124,7 +88,7 @@ The Internet is the biggest example of a WAN.
 - MAN → City
 - WAN → Large geographical area
 
----
+
 
 # 5. Internet Service Provider (ISP)
 
@@ -144,7 +108,6 @@ Without an ISP, I cannot connect to the Internet.
 - Provides Internet connection.
 - Connects my device to the Internet.
 
----
 
 # 6. Client & Server
 
@@ -160,7 +123,6 @@ Example:
 - Firefox
 - Edge
 
----
 
 ### Server
 
@@ -192,7 +154,7 @@ Browser displays webpage
 - Server sends information.
 - Every website follows this model.
 
----
+
 
 # 7. Browser
 
@@ -218,7 +180,6 @@ A browser:
 - Communicates with servers.
 - Displays webpages.
 
----
 
 # 8. Website vs Web Page
 
@@ -230,7 +191,6 @@ Example:
 
 github.com
 
----
 
 ## Web Page
 
@@ -247,7 +207,6 @@ Examples:
 - Website = Collection of pages.
 - Webpage = One page inside a website.
 
----
 
 # 9. Website vs Web Application
 
@@ -260,7 +219,6 @@ Examples:
 - Wikipedia
 - College website
 
----
 
 ### Web Application
 
@@ -278,7 +236,7 @@ Examples:
 - Website → Read information.
 - Web Application → Perform tasks.
 
----
+
 
 # 10. URL (Uniform Resource Locator)
 
@@ -295,7 +253,6 @@ A URL tells the browser where the webpage is located.
 - Every webpage has a URL.
 - Contains protocol, domain name, and path.
 
----
 
 # 11. Domain Name
 
@@ -314,7 +271,6 @@ It is easier to remember than an IP address.
 - Easy for humans to remember.
 - Connected to an IP address.
 
----
 
 # 12. IP Address (Internet Protocol Address)
 
@@ -347,7 +303,6 @@ Used inside local networks like homes and offices.
 - Every device has an IP address.
 - Computers use IP addresses to communicate.
 
----
 
 # 13. DNS (Domain Name System)
 
@@ -376,7 +331,6 @@ Without DNS, I would have to remember IP addresses instead of website names.
 - Converts domain names into IP addresses.
 - Makes websites easier to access.
 
----
 
 # 14. DNS Cache
 
@@ -389,7 +343,6 @@ This helps websites load faster because the browser doesn't need to ask the DNS 
 - Stores recent DNS lookups.
 - Improves loading speed.
 
----
 
 # 15. HTTP & HTTPS
 
@@ -404,7 +357,6 @@ HTTPS encrypts the communication to make it safer.
 - HTTP → HyperText Transfer Protocol, Normal communication.
 - HTTPS → HyperText Transfer Protocol Secure, Secure communication.
 
----
 
 # 16. Why HTTPS is Important
 
@@ -421,7 +373,6 @@ It encrypts the data before sending it over the Internet.
 - Keeps communication secure.
 - Protects sensitive information.
 
----
 
 # 17. Request & Response
 
@@ -437,7 +388,6 @@ Whenever I open a website:
 - Browser sends requests.
 - Server sends responses.
 
----
 
 # 18. TCP & UDP
 
@@ -449,7 +399,6 @@ Reliable communication.
 
 Makes sure data reaches the destination correctly.
 
----
 
 ## UDP
 
@@ -464,7 +413,6 @@ Doesn't guarantee delivery.
 - TCP → Reliable.
 - UDP → Fast.
 
----
 
 # 19. Ports
 
@@ -476,7 +424,6 @@ They act like different doors for different services.
 
 - Used by applications for communication.
 
----
 
 # 20. Common Ports
 
@@ -484,7 +431,6 @@ They act like different doors for different services.
 - HTTPS → 443
 - DNS → 53
 
----
 
 # 21. Cookies
 
@@ -492,7 +438,6 @@ Cookies are small pieces of information stored in the browser.
 
 They help websites remember users and preferences.
 
----
 
 # 22. Sessions
 
@@ -500,15 +445,12 @@ Sessions help the server remember a user while they're using a website.
 
 For example, they keep me logged in as I move between pages.
 
----
-
 # 23. Cache
 
 Cache temporarily stores frequently used data.
 
 This helps websites load faster.
 
----
 
 # 24. CDN (Content Delivery Network)
 
@@ -516,7 +458,6 @@ A CDN stores copies of website content on servers in different locations.
 
 Users receive data from the nearest server, making websites load faster.
 
----
 
 # 25. What Happens When I Type google.com?
 
@@ -529,12 +470,3 @@ Users receive data from the nearest server, making websites load faster.
 7. Server sends a response.
 8. Browser displays the webpage.
 
----
-
-# 26. Summary
-
-After learning Internet Fundamentals, I now understand how a website loads from start to finish.
-
-I also understand the roles of DNS, IP addresses, HTTP/HTTPS, TCP, browsers, servers, cookies, cache, and CDNs.
-
-These concepts will help me understand backend development and web technologies more easily.
