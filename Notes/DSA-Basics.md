@@ -47,25 +47,7 @@ A good solution should be:
 - Think before writing code.
 - Choose the best solution.
 
-# 4. Algorithm
-
-An algorithm is a step-by-step procedure used to solve a problem.
-
-Examples:
-
-- Finding the largest number in an array.
-- Sorting a list.
-- Searching for a value.
-
-Every program follows an algorithm.
-
-### Key Points
-
-- Step-by-step solution.
-- Produces the required output.
-- Can have multiple approaches.
-
-# 5. Data Structure
+# 4. Data Structure
 
 A data structure is a way of storing and organizing data.
 
@@ -86,6 +68,101 @@ Examples:
 - Improves efficiency.
 - Different problems use different data structures.
 
+# 5. Algorithm
+
+An algorithm is a step-by-step procedure used to solve a problem.
+
+Examples:
+
+- Finding the largest number in an array.
+- Sorting a list.
+- Searching for a value.
+
+Every program follows an algorithm.
+
+### Key Points
+
+- Step-by-step solution.
+- Produces the required output by analyzing time and space complexity.
+- Can have multiple approaches.
+
+
+### Characteristics of Algorithm
+
+| **Input** | The data or values given to the algorithm. |
+| **Output** | The final result produced by the algorithm. |
+| **Clear and Unambiguous (Definiteness)** | Every step should be clear and have only one meaning. |
+| **Executable Steps (Effectiveness)** | Every step should be simple and possible to perform. |
+| **Finite Steps (Finiteness)** | The algorithm should finish after a limited number of steps. |
+| **Finite Time** | The algorithm should complete its work in a reasonable amount of time. |
+
+### Easy way to remember
+
+Input
+   ↓
+Clear Steps
+   ↓
+Executable Steps
+   ↓
+Finite Steps
+   ↓
+Output
+   ↓
+Finish in Finite Time
+
+### Types of Algorithms
+
+#### 1. Recursive Algorithm
+
+A recursive algorithm solves a problem by calling itself repeatedly until it reaches a **base case** (a stopping condition).
+
+> **Remember:** Every recursive algorithm must have a base case, otherwise it will run forever.
+
+
+
+#### 2. Iterative Algorithm
+
+An iterative algorithm solves a problem by repeating the same steps using loops like `for` or `while`.
+
+> **Remember:** Uses loops instead of calling itself.
+
+
+#### 3. Divide and Conquer Algorithm
+
+A divide and conquer algorithm breaks a bigger problem into smaller problems, solves each one separately, and then combines the results to get the final answer.
+
+> **Remember:** **Divide → Solve → Combine**
+
+### Algorithm Representation
+
+An algorithm can be represented in different ways. One of the most common ways is using a **flowchart**.
+
+#### Flowchart
+
+A **flowchart** is a diagram that shows the step-by-step flow of an algorithm using different symbols connected by arrows.
+
+It helps us understand the logic of a program before writing the actual code.
+
+##### Basic Flowchart Symbols
+
+| Symbol | Name | Use |
+|--------|------|-----|
+|  Oval | Start / End | Marks the beginning or end of a flowchart. |
+|  Rectangle | Process | Represents an action or calculation. |
+|  Diamond | Decision | Checks a condition and branches into Yes/No paths. |
+|  Parallelogram | Input / Output | Used to take input or display output. |
+|  Arrow | Flow Line | Shows the direction of the flow. |
+| Circle | Connector | Connects different parts of a flowchart. |
+
+
+#### Uses of a Flowchart
+
+- Makes the logic easy to understand.
+- Helps in planning a program before coding.
+- Makes debugging easier.
+- Improves communication among the team members.
+- Makes complex problems easier to visualize.
+- Helps in explaining the program to others.
 
 # 6. Input & Output
 
