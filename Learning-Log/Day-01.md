@@ -1,10 +1,5 @@
 # Day 1 – Foundations of Computer Science
 
-## Resources
-**CS50x 2025 - Lecture 0 - Scratch**  
-https://www.youtube.com/watch?v=2WtPyqwTLKM&t=165s
-
----
 
 ## What did I learn?
 
