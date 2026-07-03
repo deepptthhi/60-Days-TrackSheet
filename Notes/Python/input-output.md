@@ -4,11 +4,7 @@
 
 The `input()` function is used to take input from the user.
 
-```python
-name = input("Enter your name: ")
-```
-
-### Example
+### Basic Input
 
 ```python
 name = input("Enter your name: ")
@@ -22,7 +18,40 @@ Enter your name: Deepthi
 Hello, Deepthi
 ```
 
-> **Note:** `input()` always returns a string.
+### Multiple Inputs
+
+You can take input more than once.
+
+```python
+name = input("Enter your name: ")
+age = input("Enter your age: ")
+
+print(name, age)
+```
+
+### Input is Always a String
+
+Even if the user enters a number, `input()` stores it as a string.
+
+```python
+age = input("Enter your age: ")
+print(type(age))
+```
+
+**Output**
+
+```
+<class 'str'>
+```
+
+### Converting Input
+
+Use `int()` or `float()` when you need a number.
+
+```python
+age = int(input("Enter your age: "))
+height = float(input("Enter your height: "))
+```
 
 ## Output (`print()`)
 
@@ -61,6 +90,9 @@ print("World!")
 Hello World!
 ```
 
-> **Remember:**
+> **Remember**
+> - `input()` → Takes input from the user.
+> - `print()` → Displays output on the screen.
 > - Text → Use quotes (`" "` or `' '`).
 > - Numbers → No quotes needed.
+> - `input()` always returns a string. Use `int()` or `float()` if you need a number.
