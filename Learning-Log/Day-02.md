@@ -1,4 +1,4 @@
-# Day 2 – Internet Fundamentals, DSA Basics & Git
+# Day 2 – Internet Fundamentals, DSA Basics, Git & GitHub
 
 
 ## What did I learn?
