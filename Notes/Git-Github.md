@@ -54,24 +54,15 @@ git config --list
 
 Whenever I work on a project, I follow this flow:
 
-┌─────────────────────────┐
-│ Write / Edit Code       │
-└─────────────┬───────────┘
-              ▼
-┌─────────────────────────┐
-│ git add                 │
-│ Stage Changes           │
-└─────────────┬───────────┘
-              ▼
-┌─────────────────────────┐
-│ git commit              │
-│ Save Changes            │
-└─────────────┬───────────┘
-              ▼
-┌─────────────────────────┐
-│ git push                │
-│ Upload to GitHub        │
-└─────────────────────────┘
+
+Write / Edit Code       
+       ↓
+    git add 
+       ↓
+   git commit   
+       ↓
+    git push                
+
 
 ### 1. Edit
 
