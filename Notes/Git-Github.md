@@ -54,28 +54,7 @@ git config --list
 
 Whenever I work on a project, I follow this flow:
 
-┌───────────────┐
-│ Write Code    │
-└───────────────┘
-        │
-        ▼
-┌───────────────┐
-│ git add       │
-│(Stage changes)│
-└───────────────┘
-        │
-        ▼
-┌───────────────┐
-│ git commit    │
-│(Save changes) │
-└───────────────┘
-        │
-        ▼
-┌───────────────┐
-│ git push      │
-│ (Upload to    │
-│ GitHub)       │
-└───────────────┘
+![alt text](image.png)
 
 ### 1. Edit
 
