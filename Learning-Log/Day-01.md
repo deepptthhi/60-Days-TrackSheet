@@ -79,24 +79,6 @@ From now on, I want to focus on understanding concepts first and then learning h
 
 ---
 
-## What questions do I still have?
-
-- Why do computers use only binary?
-- How does DNS know which IP address belongs to a website?
-- What happens after I type a website URL into my browser?
-- How does HTTPS keep communication secure?
-
----
-
-## What's next?
-
-- Learn Scratch Basics.
-- Understand how a browser communicates with a server.
-- Learn the Request → Response lifecycle.
-- Explore HTTP methods (GET, POST, PUT, DELETE).
-
----
-
 ### Today's One-Line Summary
 
 > "Programming is not about writing code first; it's all about learning how to think before coding."
