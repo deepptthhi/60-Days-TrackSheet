@@ -44,10 +44,83 @@ Its syntax is simple and easy to read, it's one of the best languages for beginn
 
 - Widely used in the tech industry.
 
+## Check Python Version
 
+```bash
+python --version
+```
 
-## Python Syntax
+or
 
+```bash
+py --version
+```
 
+## Running Python
 
-One thing I like about Python is that it looks clean. Instead of using lots of symbols like {} or ;, Python uses indentation (spaces) and new lines to organize code. This makes programs much easier to read and write.
+There are two common ways to run Python:
+
+1. **Python File (.py)**
+   - Write your code in a file (e.g., `hello.py`).
+   - Run it using:
+     ```bash
+     python hello.py
+     ```
+     or
+     ```bash
+     py hello.py
+     ```
+     (on Windows)
+
+2. **Python Interactive Shell**
+   - Open the terminal and type:
+     ```bash
+     python
+     ```
+     or
+     ```bash
+     py
+     ```
+   - You can test small pieces of code without creating a file.
+   - Exit the shell using:
+     ```python
+     exit()
+     ```
+
+## First Python Program
+
+```python
+print("Hello, World!")
+```
+
+Output:
+```
+Hello, World!
+```
+## Indentation in Python
+
+One thing that's different about Python is indentation.
+
+Indentation simply means adding spaces before a line of code. In Python, these spaces are not just for making the code look neat instead they tell Python which lines belong together.
+
+Example:
+
+Correct 
+
+```python
+if 5 > 2:
+    print("Five is greater than two!")
+```
+
+If I forget the spaces, Python throws an error.
+
+Wrong:
+
+```python
+if 5 > 2:
+print("Five is greater than two!")
+```
+
+### Good practice
+- Use 4 spaces for indentation.
+- Be consistent throughout the same block of code.
