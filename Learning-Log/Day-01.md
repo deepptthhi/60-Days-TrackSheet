@@ -9,7 +9,6 @@ What I understood today is that programming is only a way to express a solution.
 
 I also got a basic idea of how computers represent data and why CS50 starts with Scratch instead of directly teaching a programming language.
 
----
 
 ## What new concepts did I understand?
 
@@ -23,7 +22,6 @@ I also got a basic idea of how computers represent data and why CS50 starts with
 - Concepts like variables, loops, conditions, and functions are common in almost every programming language.
 - Debugging isn't a mistake it's part of the development process.
 
----
 
 ## What computer/software engineering fundamentals did I learn today?
 
@@ -60,7 +58,7 @@ Since I'm just starting out, I wanted to understand some basic terms that I'll k
 - **IP Address** → The unique address of a device on a network.
 - **HTTP / HTTPS** → Rules used by browsers and servers to communicate (HTTPS is secure).
 
----
+
 
 ## What changed in my thinking?
 
@@ -72,7 +70,6 @@ Now I realize that languages are just tools. If I don't know how to think throug
 
 From now on, I want to focus on understanding concepts first and then learning how to implement them.
 
----
 
 ### Today's One-Line Summary
 
