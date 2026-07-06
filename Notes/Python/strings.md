@@ -397,16 +397,243 @@ print(first + " " + second)
 ```
 Hello World
 ```
+# String Formatting
 
-# Easy to remember
+## What is String Formatting?
+
+String formatting is a way of inserting values into a string.
+
+Instead of joining strings and variables using the `+` operator, Python gives us easier and cleaner ways to display values inside a string.
+
+## Why Do We Use String Formatting?
+
+String formatting helps us:
+
+* Display variables inside a string.
+* Make the output easier to read.
+* Write cleaner code.
+* Create dynamic messages.
+
+## Method 1: f-Strings (Recommended)
+
+An f-string is the easiest and most commonly used way to format strings.
+
+We simply add `f` before the string and place variables inside curly braces `{}`.
+
+### Syntax
+
+```python
+f"Text {variable}"
+```
+
+### Example
+
+```python
+name = "Deepthi"
+age = 22
+
+print(f"My name is {name} and I am {age} years old.")
+```
+
+**Output**
+
+```
+My name is Deepthi and I am 22 years old.
+```
+
+I found this method the easiest because it's simple to read and doesn't need any extra functions.
+
+## Method 2: format()
+
+The `format()` method is another way to insert values into a string.
+
+### Syntax
+
+```python
+"Text {}".format(value)
+```
+
+### Example
+
+```python
+name = "Deepthi"
+age = 22
+
+print("My name is {} and I am {} years old.".format(name, age))
+```
+
+**Output**
+
+```
+My name is Deepthi and I am 22 years old.
+```
+
+The values are placed in the same order as they are passed to `format()`.
+
+## Using Index Numbers
+
+We can also choose which value should be placed where by using index numbers.
+
+```python
+print("{1} is learning {0}".format("Python", "Deepthi"))
+```
+
+**Output**
+
+```
+Deepthi is learning Python
+```
+
+## Using Named Values
+
+Instead of using index numbers, we can give each value a name.
+
+```python
+print("My name is {name}".format(name="Deepthi"))
+```
+
+**Output**
+
+```
+My name is Deepthi
+```
+
+This makes the code a little easier to understand, especially when there are many values.
+
+## Formatting Numbers
+
+We can also control how numbers are displayed.
+
+### Showing Decimal Places
+
+```python
+price = 99.4567
+
+print(f"{price:.2f}")
+```
+
+**Output**
+
+```
+99.46
+```
+
+The number is displayed with only two decimal places.
+
+### Adding Commas
+
+```python
+amount = 1000000
+
+print(f"{amount:,}")
+```
+
+**Output**
+
+```
+1,000,000
+```
+
+This makes large numbers much easier to read.
+
+### Showing Percentage
+
+```python
+score = 0.85
+
+print(f"{score:.0%}")
+```
+
+**Output**
+
+```
+85%
+```
+
+## Aligning Text
+
+Sometimes we want the output to look neat, especially when printing tables.
+
+### Left Align
+
+```python
+name = "Python"
+
+print(f"{name:<10}")
+```
+
+### Right Align
+
+```python
+name = "Python"
+
+print(f"{name:>10}")
+```
+
+### Center Align
+
+```python
+name = "Python"
+
+print(f"{name:^10}")
+```
+
+These are mostly useful when displaying reports or tabular data.
+
+## Common Mistakes
+
+### Forgetting the `f`
+
+```python
+name = "Deepthi"
+
+print("Hello {name}")
+```
+
+**Output**
+
+```
+Hello {name}
+```
+
+The variable is not replaced because the string doesn't start with `f`.
+
+Correct way:
+
+```python
+name = "Deepthi"
+
+print(f"Hello {name}")
+```
+
+### Forgetting Curly Braces
+
+```python
+name = "Deepthi"
+
+print(f"Hello name")
+```
+
+This prints the word **name** instead of the variable.
+
+The correct way is:
+
+```python
+print(f"Hello {name}")
+```
+
+# Easy to Remember
 
 - Strings are used to store text.
 - Strings are immutable, so they cannot be changed directly.
-- Indexing gives one character.
-- Slicing gives part of a string.
+- Indexing returns a single character.
+- Slicing returns a part of the string.
 - `find()` returns **-1** if the value is not found, while `index()` gives an error.
-- `rfind()` and `rindex()` work from the right side.
-- `strip()` removes unwanted spaces.
-- `replace()` changes one value to another.
+- `rfind()` and `rindex()` search from the right side of the string.
+- `replace()` is used to replace one part of a string with another.
+- `strip()` removes extra spaces from the beginning and end of a string.
 - `startswith()` and `endswith()` are useful for checking prefixes and suffixes.
-- Use `+` to join strings.
+- Use `+` to join two or more strings.
+- Use **f-strings** when you want to insert variables into a string because they are simple and easy to read.
+- The `format()` method is another way to insert values into a string and is commonly seen in older Python code.
+- String formatting helps make the output cleaner and easier to read.
