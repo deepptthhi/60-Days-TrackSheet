@@ -1,275 +1,380 @@
-## CSS Margins
 
-When I started designing webpages, I noticed that some elements were too close to each other. That's where **margin** helps.
 
-Margin is the space **outside** an element's border. It creates space between two elements.
+## CSS Display
 
-### Why do we use margin?
+One thing I noticed while learning CSS is that every HTML element behaves differently. Some elements take the full width of the page, while others only take the space they need. The **display** property controls this behavior.
 
-* To add space between elements.
-* To make the webpage look clean.
-* To improve readability.
+### Why do we use display?
 
-### Syntax
-
-```css
-selector {
-    margin: value;
-}
-```
-
-### Example
-
-```css
-div {
-    margin: 20px;
-}
-```
-
-This adds **20px** of space on all four sides.
-
-### Margin for Individual Sides
-
-```css
-div {
-    margin-top: 20px;
-    margin-right: 15px;
-    margin-bottom: 20px;
-    margin-left: 15px;
-}
-```
-
-### Shorthand
-
-All four sides
-
-```css
-margin: 20px;
-```
-
-Top-Bottom | Left-Right
-
-```css
-margin: 20px 10px;
-```
-
-Top | Left-Right | Bottom
-
-```css
-margin: 10px 20px 30px;
-```
-
-Top | Right | Bottom | Left
-
-```css
-margin: 10px 15px 20px 25px;
-```
-
-### Auto Margin
-
-```css
-div {
-    width: 300px;
-    margin: auto;
-}
-```
-
-`margin: auto;` is commonly used to center an element horizontally.
-
-## CSS Padding
-
-At first, I thought margin and padding were the same. Later I understood that **padding is the space inside the border**, between the content and the border.
-
-### Why do we use padding?
-
-* To give content some breathing space.
-* To make buttons and boxes look better.
-* To improve readability.
+* To control how elements appear on the page.
+* To arrange elements properly.
+* To create different layouts.
 
 ### Syntax
 
 ```css
 selector {
-    padding: value;
+    display: value;
 }
 ```
 
-### Example
+### Common Display Values
+
+### block
+
+A block element always starts on a new line and takes the full available width.
+
+Examples:
+
+* `<div>`
+* `<h1>`
+* `<p>`
 
 ```css
 div {
-    padding: 20px;
+    display: block;
 }
 ```
 
-This adds 20px of space inside the element.
+### inline
 
-### Individual Padding
+An inline element only takes as much width as it needs.
 
-```css
-padding-top: 20px;
-padding-right: 10px;
-padding-bottom: 20px;
-padding-left: 10px;
-```
+Examples:
 
-### Shorthand
+* `<span>`
+* `<a>`
+* `<strong>`
 
 ```css
-padding: 20px;
-```
-
-```css
-padding: 20px 10px;
-```
-
-```css
-padding: 10px 15px 20px;
-```
-
-```css
-padding: 10px 15px 20px 25px;
-```
-
-### Easy Way to Remember
-
-**Margin → Outside the border**
-
-**Padding → Inside the border**
-
-## CSS Height and Width
-
-Height and width decide the size of an element.
-
-### Width
-
-```css
-div {
-    width: 300px;
+span {
+    display: inline;
 }
 ```
 
-### Height
+### inline-block
 
-```css
-div {
-    height: 200px;
-}
-```
-
-### Both Together
-
-```css
-div {
-    width: 300px;
-    height: 200px;
-}
-```
-
-We can also use percentages.
-
-```css
-width: 50%;
-```
-
-Or viewport units.
-
-```css
-width: 100vw;
-height: 100vh;
-```
-
-## CSS Box Model
-
-The Box Model is one of the most important concepts in CSS.
-
-Every HTML element is treated like a box.
-
-A box has four parts.
-
-```text
-+-------------------------+
-|        Margin           |
-|  +-------------------+  |
-|  |      Border       |  |
-|  | +---------------+ |  |
-|  | |   Padding     | |  |
-|  | | +-----------+ | |  |
-|  | | | Content   | | |  |
-|  | | +-----------+ | |  |
-|  | +---------------+ |  |
-|  +-------------------+  |
-+-------------------------+
-```
-
-### Content
-
-The actual text, image, or anything inside the element.
-
-### Padding
-
-Space between the content and border.
-
-### Border
-
-The outline around the element.
-
-### Margin
-
-Space outside the border.
-
-### Why is the Box Model important?
-
-Understanding the Box Model helps us:
-
-* Create better layouts.
-* Add proper spacing.
-* Fix alignment issues.
-* Design responsive webpages.
-
-## CSS Outline
-
-An outline is another line drawn around an element.
-
-Unlike a border, it does **not** take up extra space.
-
-### Syntax
-
-```css
-outline: 2px solid red;
-```
-
-### Example
+It behaves like an inline element but allows us to set width and height.
 
 ```css
 button {
-    outline: 2px solid blue;
+    display: inline-block;
 }
 ```
 
-### Difference Between Border and Outline
+### none
 
-| Border                | Outline               |
-| --------------------- | --------------------- |
-| Takes space           | Doesn't take space    |
-| Part of the box model | Outside the box model |
-
-## CSS Text
-
-CSS allows us to style text in different ways.
-
-### Text Color
+This completely hides an element.
 
 ```css
 p {
-    color: blue;
+    display: none;
 }
 ```
 
-### Text Alignment
+The element won't be visible and won't take up any space.
+
+## CSS Max-width
+
+Earlier, I used the `width` property for everything. Later, I learned that **max-width** is often a better choice because it makes websites more responsive.
+
+### Why do we use max-width?
+
+It prevents an element from becoming wider than a certain size.
+
+### Syntax
 
 ```css
-text-align: center;
+max-width: 800px;
+```
+
+### Example
+
+```css
+.container {
+    width: 100%;
+    max-width: 800px;
+}
+```
+
+If the screen is smaller than 800px, the container shrinks automatically.
+
+This is why `max-width` is commonly used in modern websites.
+
+## CSS Position
+
+The **position** property decides where an element appears on the page.
+
+### Syntax
+
+```css
+position: value;
+```
+
+### static
+
+This is the default position.
+
+The element appears normally in the document.
+
+```css
+position: static;
+```
+
+### relative
+
+The element stays in its original place, but we can move it slightly using top, bottom, left, or right.
+
+```css
+position: relative;
+```
+
+### absolute
+
+The element is positioned relative to its nearest positioned parent.
+
+```css
+position: absolute;
+```
+
+### fixed
+
+The element stays in the same place even when the page is scrolled.
+
+This is commonly used for navigation bars.
+
+```css
+position: fixed;
+```
+
+### sticky
+
+The element behaves normally until it reaches a certain position while scrolling. Then it sticks to that position.
+
+```css
+position: sticky;
+top: 0;
+```
+
+Sticky headers are a common example.
+
+## CSS Position Offsets
+
+After using `position`, we can move elements using offset properties.
+
+### top
+
+```css
+top: 20px;
+```
+
+Moves the element down.
+
+### bottom
+
+```css
+bottom: 20px;
+```
+
+Moves the element upward from the bottom.
+
+### left
+
+```css
+left: 30px;
+```
+
+Moves the element to the right.
+
+### right
+
+```css
+right: 20px;
+```
+
+Moves the element toward the left.
+
+Example:
+
+```css
+.box {
+    position: relative;
+    top: 20px;
+    left: 40px;
+}
+```
+
+## CSS Z-index
+
+Sometimes two elements overlap each other.
+
+The **z-index** property decides which element appears on top.
+
+### Syntax
+
+```css
+z-index: 1;
+```
+
+Example
+
+```css
+.box1 {
+    position: absolute;
+    z-index: 2;
+}
+
+.box2 {
+    position: absolute;
+    z-index: 1;
+}
+```
+
+Since **box1** has a higher value, it appears above **box2**.
+
+Remember:
+
+`z-index` works only on positioned elements.
+
+## CSS Overflow
+
+Sometimes the content inside a box becomes too large.
+
+The **overflow** property controls what should happen in that situation.
+
+### visible
+
+Default value.
+
+Content simply comes out of the box.
+
+```css
+overflow: visible;
+```
+
+### hidden
+
+Extra content is hidden.
+
+```css
+overflow: hidden;
+```
+
+### scroll
+
+Scrollbars are always shown.
+
+```css
+overflow: scroll;
+```
+
+### auto
+
+Scrollbars appear only when needed.
+
+```css
+overflow: auto;
+```
+
+This is the value used most often.
+
+## CSS Float
+
+Before Flexbox and Grid became popular, **float** was commonly used to arrange elements side by side.
+
+Even today, it's useful to know because older websites still use it.
+
+### Float Left
+
+```css
+img {
+    float: left;
+}
+```
+
+The image moves to the left, and text wraps around it.
+
+### Float Right
+
+```css
+img {
+    float: right;
+}
+```
+
+The image moves to the right.
+
+### Clearing Float
+
+Sometimes floating elements affect other elements below them.
+
+To fix this, we use:
+
+```css
+clear: both;
+```
+
+## CSS Inline-block
+
+Earlier, I learned that:
+
+* Inline elements cannot have width and height.
+* Block elements always take the full width.
+
+`inline-block` gives the advantages of both.
+
+### Example
+
+```css
+.card {
+    display: inline-block;
+    width: 200px;
+    height: 150px;
+}
+```
+
+Now multiple cards can appear on the same line while still having their own width and height.
+
+This is useful for:
+
+* Cards
+* Buttons
+* Small boxes
+* Menu items
+
+## Quick Recap
+
+| Property                         | Purpose                                               |
+| -------------------------------- | ----------------------------------------------------- |
+| `display`                        | Controls how an element appears                       |
+| `max-width`                      | Prevents elements from becoming too wide              |
+| `position`                       | Places elements on the page                           |
+| `top`, `bottom`, `left`, `right` | Moves positioned elements                             |
+| `z-index`                        | Controls which element appears on top                 |
+| `overflow`                       | Handles extra content inside an element               |
+| `float`                          | Places elements side by side                          |
+| `inline-block`                   | Keeps elements inline while allowing width and height |
+
+## What I Learned
+
+This section helped me understand how CSS controls the layout of a webpage.
+
+Earlier, I only knew how to change colors and fonts. Now I understand how elements are arranged, how to move them, how overlapping works, and how different display types affect the page.
+
+I also learned that while properties like **float** are still useful to know, modern websites mostly use **Flexbox** and **CSS Grid** for layouts. Still, understanding these basics makes it much easier to learn advanced layout techniques later.
+
+## CSS Align
+
+When I first started designing webpages, one thing I struggled with was aligning elements. Sometimes I wanted text in the center, sometimes I wanted an image in the middle, or a box in the center of the page.
+
+CSS provides different ways to align elements depending on what we are trying to align.
+
+### Align Text
+
+```css
+h1 {
+    text-align: center;
+}
 ```
 
 Other values are:
@@ -278,271 +383,255 @@ Other values are:
 * right
 * justify
 
-### Text Decoration
+### Center a Block Element
 
 ```css
-text-decoration: underline;
-```
-
-Remove underline from links
-
-```css
-text-decoration: none;
-```
-
-### Text Transform
-
-Uppercase
-
-```css
-text-transform: uppercase;
-```
-
-Lowercase
-
-```css
-text-transform: lowercase;
-```
-
-Capitalize
-
-```css
-text-transform: capitalize;
-```
-
-### Letter Spacing
-
-```css
-letter-spacing: 2px;
-```
-
-### Word Spacing
-
-```css
-word-spacing: 10px;
-```
-
-### Line Height
-
-```css
-line-height: 2;
-```
-
-This increases the space between lines.
-
-## CSS Fonts
-
-Fonts decide how text looks.
-
-### Font Family
-
-```css
-font-family: Arial;
-```
-
-Multiple fonts can be given.
-
-```css
-font-family: Arial, Helvetica, sans-serif;
-```
-
-If one font isn't available, the browser uses the next one.
-
-### Font Size
-
-```css
-font-size: 20px;
-```
-
-### Font Weight
-
-```css
-font-weight: bold;
-```
-
-Other values:
-
-* normal
-* lighter
-* bolder
-* 100–900
-
-### Font Style
-
-```css
-font-style: italic;
-```
-
-### Shorthand
-
-```css
-font: italic bold 20px Arial;
-```
-
-## CSS Icons
-
-Instead of using images for icons, websites often use icon libraries.
-
-Popular libraries are:
-
-* Font Awesome
-* Bootstrap Icons
-* Google Material Icons
-
-Example
-
-```html
-<i class="fa-solid fa-house"></i>
-```
-
-Icons make websites look modern and are easy to customize using CSS.
-
-## CSS Links
-
-Links are created using the `<a>` tag.
-
-CSS helps change their appearance.
-
-### Example
-
-```css
-a {
-    color: blue;
+.container {
+    width: 400px;
+    margin: auto;
 }
 ```
 
-Remove underline
+`margin: auto;` is one of the easiest ways to center a block element.
+
+### Center Using Flexbox
 
 ```css
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+```
+
+This is the most common way to center content in modern websites.
+
+## CSS Navigation Bars
+
+Almost every website has a navigation bar.
+
+It helps users move between different pages like **Home**, **About**, **Services**, and **Contact**.
+
+Navigation bars are usually created using an unordered list.
+
+### HTML
+
+```html
+<ul>
+    <li><a href="#">Home</a></li>
+    <li><a href="#">About</a></li>
+    <li><a href="#">Contact</a></li>
+</ul>
+```
+
+### CSS
+
+```css
+ul {
+    list-style: none;
+}
+
+li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
 a {
     text-decoration: none;
 }
 ```
 
-### Link States
+This removes bullets, places the items in one row, and removes the underline from links.
 
-```css
-a:link
+## CSS Dropdowns
+
+A dropdown menu displays more options when the user hovers over or clicks a menu item.
+
+Example:
+
+```
+Services
+   ↓
+Frontend
+Backend
+DevOps
 ```
 
-Normal link
+### Basic HTML
 
-```css
-a:visited
+```html
+<div class="dropdown">
+    <button>Services</button>
+
+    <div class="content">
+        <a href="#">Frontend</a>
+        <a href="#">Backend</a>
+        <a href="#">DevOps</a>
+    </div>
+</div>
 ```
 
-Visited link
+### Basic CSS
 
 ```css
-a:hover
+.content {
+    display: none;
+}
+
+.dropdown:hover .content {
+    display: block;
+}
 ```
 
-Mouse is over the link
+Initially, the menu is hidden.
+
+When the mouse moves over **Services**, the menu becomes visible.
+
+## CSS Image Gallery
+
+Image galleries are used to display multiple images in an organized way.
+
+Examples include:
+
+* Portfolio websites
+* Shopping websites
+* Photography websites
+
+Simple example:
+
+```html
+<img src="image1.jpg">
+<img src="image2.jpg">
+<img src="image3.jpg">
+```
+
+CSS
 
 ```css
-a:active
+img {
+    width: 200px;
+    margin: 10px;
+}
 ```
 
-Link is being clicked
+Nowadays, image galleries are usually created using **Flexbox** or **Grid**.
+
+## CSS Image Sprites
+
+Instead of loading many small images separately, we can combine them into one large image.
+
+This combined image is called an **image sprite**.
+
+CSS then displays only the required part of the image.
+
+### Why use image sprites?
+
+* Faster page loading
+* Fewer HTTP requests
+* Better website performance
+
+Although image sprites are less common today, it's still useful to know what they are.
+
+## CSS Forms
+
+Forms are used to collect information from users.
+
+Examples include:
+
+* Login forms
+* Registration forms
+* Contact forms
+
+We can use CSS to make forms look cleaner.
 
 Example
 
 ```css
-a:hover {
-    color: red;
+input {
+    width: 300px;
+    padding: 10px;
 }
-```
 
-## CSS Lists
-
-CSS can style ordered and unordered lists.
-
-### Bullet Style
-
-```css
-list-style-type: square;
-```
-
-Other values:
-
-* disc
-* circle
-* none
-
-### Number Style
-
-```css
-list-style-type: upper-roman;
-```
-
-### Remove Bullets
-
-```css
-list-style: none;
-```
-
-This is commonly used while creating navigation bars.
-
-## CSS Tables
-
-CSS makes tables look neat and easy to read.
-
-### Border
-
-```css
-table, th, td {
-    border: 1px solid black;
-}
-```
-
-### Border Collapse
-
-```css
-border-collapse: collapse;
-```
-
-This removes the double border.
-
-### Padding
-
-```css
-th, td {
+button {
+    background-color: blue;
+    color: white;
     padding: 10px;
 }
 ```
 
-### Text Alignment
+This makes input fields and buttons look much better.
 
-```css
-text-align: center;
+## CSS Website Layout
+
+A website is usually divided into different sections.
+
+A common layout looks like this:
+
+```text
+-------------------------
+        Header
+-------------------------
+      Navigation
+-------------------------
+ Main Content | Sidebar
+-------------------------
+        Footer
+-------------------------
 ```
 
-### Alternate Row Colors
+Each section has its own purpose.
 
-```css
-tr:nth-child(even) {
-    background-color: lightgray;
-}
-```
+### Header
 
-This improves readability for large tables.
+Usually contains:
+
+* Website logo
+* Website title
+
+### Navigation
+
+Contains links to different pages.
+
+### Main Content
+
+This is where most of the webpage content is displayed.
+
+### Sidebar
+
+Often contains:
+
+* Recent posts
+* Categories
+* Advertisements
+* Extra links
+
+### Footer
+
+Usually contains:
+
+* Copyright information
+* Contact details
+* Social media links
+
+Nowadays, layouts are mostly created using **Flexbox** and **CSS Grid** because they are easier and more responsive.
 
 ## Quick Recap
 
-* **Margin** → Space outside an element.
-* **Padding** → Space inside an element.
-* **Height & Width** → Control element size.
-* **Box Model** → Every element has Content, Padding, Border, and Margin.
-* **Outline** → Similar to a border but doesn't take space.
-* **Text** → Styles text using color, alignment, spacing, and decoration.
-* **Fonts** → Change the font family, size, style, and weight.
-* **Icons** → Add symbols using icon libraries.
-* **Links** → Style hyperlinks and their different states.
-* **Lists** → Customize bullets and numbering.
-* **Tables** → Improve the appearance of tables with borders, spacing, and alignment.
+| Topic          | What it does                            |
+| -------------- | --------------------------------------- |
+| Align          | Positions text and elements properly    |
+| Navigation Bar | Helps users move between pages          |
+| Dropdown       | Shows extra options when needed         |
+| Image Gallery  | Displays multiple images neatly         |
+| Image Sprite   | Combines many small images into one     |
+| Forms          | Styles input fields and buttons         |
+| Website Layout | Organizes the overall webpage structure |
 
 ## What I Learned
 
-This part of CSS helped me understand how websites become neat and organized. Earlier, I only knew how to change colors, but now I know how to control spacing, size, fonts, tables, and text.
+After learning these topics, I understood how a complete webpage is put together.
 
-The biggest concept I learned here is the **CSS Box Model**. Once I understood the difference between **margin**, **border**, **padding**, and **content**, designing layouts became much easier. I also realized that good spacing and readable text make a huge difference in how a webpage looks.
+Earlier, I only knew how to style individual elements like headings and paragraphs. Now I know how to organize an entire webpage using navigation bars, forms, image galleries, and proper layouts.
+
+I also learned that while some older techniques like **image sprites** are not used as much today, they are still good to know. For modern websites, **Flexbox** and **CSS Grid** are the preferred way to build responsive layouts.
+
