@@ -76,7 +76,55 @@ This command shows:
 - Partitions
 - File system type
 - Partition table
+## Understanding Storage Devices
 
+In Linux, storage devices are represented as files under the `/dev` directory.
+
+Some common names are:
+
+- `/dev/sda` → First hard disk or SSD
+- `/dev/sdb` → Second hard disk or SSD
+- `/dev/sda1` → First partition of the first disk
+- `/dev/sda2` → Second partition of the first disk
+
+You can view all connected storage devices using:
+
+```bash
+lsblk
+```
+## What is a Partition?
+
+A partition is a section of a physical disk.
+
+Instead of using one large disk as a single storage space, it can be divided into multiple partitions. Each partition can have its own file system and can be mounted separately.
+
+For example:
+
+```text
+Disk (500 GB)
+│
+├── Partition 1 (100 GB)
+├── Partition 2 (200 GB)
+└── Partition 3 (200 GB)
+```
+## Common File Systems
+
+A file system decides how data is stored and organized on a storage device.
+
+Some commonly used file systems are:
+
+| File System | Used In |
+|-------------|---------|
+| ext4 | Most Linux distributions |
+| xfs | Large storage systems |
+| ntfs | Windows |
+| vfat | USB drives and memory cards |
+
+To check the file system type:
+
+```bash
+df -T
+```
 
 ## Mounting a Disk
 
