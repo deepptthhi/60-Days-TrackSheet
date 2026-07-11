@@ -321,8 +321,6 @@ Useful for browser compatibility.
 
 
 
-# Interview Questions
-
 ### Flexbox vs Grid
 
 **Flexbox** - One-dimensional - Best for rows and columns
