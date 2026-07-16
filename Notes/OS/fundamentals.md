@@ -1,0 +1,399 @@
+
+
+# OS Fundamentals & System Architecture
+
+
+
+
+
+# 1. What is an Operating System?
+
+An **Operating System (OS)** is system software that manages computer
+hardware and provides services to applications.
+
+Think of the OS as the **manager of a company**.
+
+-   User → gives instructions
+-   OS → decides how the work is done
+-   Hardware → performs the work
+
+Without an OS, every application would need to know how to control the
+CPU, RAM, keyboard, display, printer, storage, and network directly.
+
+## Real-life analogy
+
+Imagine a restaurant.
+
+-   Customer = User
+-   Waiter = Operating System
+-   Chef = CPU
+-   Kitchen = Hardware
+
+The customer never enters the kitchen. The waiter takes the order and
+coordinates everything.
+
+## Used every day
+
+When you double-click Chrome:
+
+1.  Windows/Linux receives your request.
+2.  The OS loads Chrome into RAM.
+3.  CPU starts executing Chrome.
+4.  The OS allocates memory.
+5.  The OS reads files from disk.
+6.  The OS sends output to the monitor.
+
+**Memory Trick:** **OS = Manager between User and Hardware**
+
+
+
+# 2. Why Do We Need an Operating System?
+
+Without an OS:
+
+-   Programs would conflict with each other.
+-   Hardware would be difficult to use.
+-   Security would be poor.
+-   Memory would not be managed.
+
+The OS solves these problems by managing:
+
+-   CPU
+-   Memory
+-   Files
+-   Devices
+-   Security
+-   Networking
+
+
+
+# 3. Evolution of Operating Systems
+
+## No OS
+
+Users manually loaded one program at a time.
+
+## Batch Systems
+
+Jobs were collected and executed one after another.
+
+Example: Monthly payroll.
+
+## Multiprogramming
+
+Several jobs stayed in memory together so the CPU stayed busy.
+
+## Time Sharing
+
+Many users could interact with the computer.
+
+## Modern Systems
+
+Windows, Linux, Android, macOS support multitasking, networking,
+virtualization, and security.
+
+**Remember:** No OS → Batch → Multiprogramming → Time Sharing → Modern
+
+
+# 4. Goals of an Operating System
+
+-   Convenience (easy to use)
+-   Efficiency (use hardware well)
+-   Reliability
+-   Security
+-   Fair resource sharing
+
+
+
+# 5. Components of an Operating System
+
+  Component         Responsibility
+  ----------------- --------------------------
+  Process Manager   Runs programs
+  Memory Manager    Allocates RAM
+  File System       Stores files
+  Device Manager    Controls hardware
+  Security          Permissions & protection
+  Networking        Communication
+
+Mnemonic: **PMFD-SN**
+
+
+# 6. Services Provided by an OS
+
+-   Program execution
+-   File operations
+-   I/O operations
+-   Error detection
+-   Resource allocation
+-   Accounting
+-   Protection
+-   Communication
+
+Example: Saving a document requires file, memory and storage services
+together.
+
+
+# 7. Types of Operating Systems
+
+## Batch OS
+
+Jobs execute in batches.
+
+Example: Payroll.
+
+## Multiprogramming OS
+
+Multiple programs remain in memory.
+
+## Multitasking OS
+
+Run Chrome, VS Code and Spotify together.
+
+## Multiprocessing OS
+
+Uses multiple CPU cores.
+
+## Multi-user OS
+
+Many users share one machine.
+
+## Distributed OS
+
+Multiple computers behave like one system.
+
+## Network OS
+
+Manages computers connected over a network.
+
+## Real-Time OS (RTOS)
+
+Strict deadlines.
+
+Examples: - Airbag controller - Pacemaker - Industrial robot
+
+Memory Trick: **Real-Time = Missing the deadline means failure.**
+
+
+
+# 8. Operating System Architecture
+
+## Monolithic Kernel
+
+Everything runs inside one kernel.
+
+Pros: - Fast
+
+Cons: - Large codebase
+
+Example: Linux
+
+## Microkernel
+
+Only essential services stay inside kernel.
+
+Example: MINIX
+
+Pros: - Secure - Modular
+
+Cons: - Slight communication overhead
+
+## Hybrid Kernel
+
+Mix of monolithic and microkernel ideas.
+
+Examples: Windows, macOS
+
+## Layered Architecture
+
+Each layer uses the services below it.
+
+Easy to understand and maintain.
+
+
+
+# 9. Kernel
+
+The **kernel** is the core of the operating system.
+
+Responsibilities:
+
+-   CPU scheduling
+-   Memory management
+-   Device management
+-   File systems
+-   Interrupt handling
+
+Real-life analogy:
+
+The kernel is the **heart** of the OS.
+
+Applications never touch hardware directly.
+
+
+
+# 10. Shell
+
+The shell is the interface between the user and the operating system.
+
+Examples:
+
+-   Bash
+-   PowerShell
+-   Zsh
+
+Example:
+
+``` bash
+ls
+mkdir notes
+cd notes
+```
+
+The shell converts your commands into system calls.
+
+
+# 11. User Mode vs Kernel Mode
+
+  User Mode             Kernel Mode
+  --------------------- ------------------
+  Limited permissions   Full permissions
+  Applications          OS kernel
+  Safer                 Hardware access
+
+Reason:
+
+Applications should not directly overwrite memory or access devices.
+
+
+
+# 12. System Calls
+
+Applications request OS services using **system calls**.
+
+Examples:
+
+-   open()
+-   read()
+-   write()
+-   fork()
+-   exec()
+
+Python example:
+
+``` python
+with open("hello.txt","w") as f:
+    f.write("Hello")
+```
+
+Python eventually invokes operating system file services.
+
+
+# 13. Interrupts, Traps & Exceptions
+
+## Interrupt
+
+Generated by hardware.
+
+Example: Keyboard key pressed.
+
+## Trap
+
+Generated intentionally by software.
+
+Example: System call.
+
+## Exception
+
+Generated due to an error.
+
+Examples:
+
+-   Divide by zero
+-   Invalid memory access
+
+Memory Trick:
+
+Interrupt = Outside event
+
+Trap = Requested
+
+Exception = Unexpected
+
+
+
+# 14. DMA (Direct Memory Access)
+
+Normally:
+
+Device → CPU → RAM
+
+With DMA:
+
+Device → RAM
+
+CPU becomes free for other work.
+
+Example: Large file copy.
+
+
+# 15. Booting Process
+
+1.  Power ON
+2.  BIOS / UEFI
+3.  Bootloader
+4.  Kernel
+5.  Drivers
+6.  Login Screen
+
+Mnemonic:
+
+Power → BIOS → Bootloader → Kernel → Login
+
+
+
+# 16. BIOS vs UEFI
+
+  BIOS             UEFI
+  ---------------- -----------------------
+  Older            Modern
+  Slower           Faster
+  Limited          Supports larger disks
+  Text interface   Rich interface
+
+
+
+# 17. Virtual Machines (Introduction)
+
+A Virtual Machine lets one physical computer run multiple operating
+systems.
+
+Examples:
+
+-   VirtualBox
+-   VMware
+-   Hyper-V
+
+Uses:
+
+-   Testing
+-   Development
+-   Cloud computing
+
+
+
+# 18. Quick Revision
+
+-   OS = Manager
+-   Kernel = Core
+-   Shell = User interface
+-   System Call = Ask OS for service
+-   Interrupt = Hardware signal
+-   Trap = Software request
+-   Exception = Error
+-   DMA = Device copies directly to RAM
+-   BIOS/UEFI starts the boot process
+
+
+
+
