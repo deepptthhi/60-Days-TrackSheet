@@ -3,8 +3,6 @@
 These topics are often skipped in short OS notes but are useful for
 placements, GATE basics, and interviews.
 
-# Topics You Should Also Know
-
 ## Process Management
 
 -   Process Scheduling Queue
@@ -161,5 +159,214 @@ placements, GATE basics, and interviews.
 -   Explain Boot Process
 -   Explain Context Switching
 -   Explain Virtual Memory using an example
+
+# Additional Theory Topics (Complete Coverage)
+
+> This appendix lists the remaining Operating Systems theory topics that
+> are commonly covered in university courses, GATE syllabi, and software
+> engineering interviews. It complements the first five handbook files.
+
+# 1. Advanced Process Management
+
+## Scheduling Queues
+
+-   Job Queue
+-   Ready Queue
+-   Device Queue
+
+## Types of Schedulers
+
+-   Long-Term Scheduler
+-   Medium-Term Scheduler
+-   Short-Term Scheduler
+
+## Other Concepts
+
+-   CPU-bound vs I/O-bound Processes
+-   Process Image
+-   Reentrant Code
+
+# 2. Advanced Memory Management
+
+## Program Loading
+
+-   Dynamic Loading
+-   Dynamic Linking
+-   Shared Libraries
+
+## Memory Allocation
+
+-   First Fit
+-   Best Fit
+-   Worst Fit
+-   Next Fit
+
+## Memory Organization
+
+-   Compaction
+-   Relocation
+-   Memory Protection
+-   Buddy Memory Allocation
+-   Slab Allocation (overview)
+
+# 3. Advanced Virtual Memory
+
+## Page Tables
+
+-   Single-Level Page Table
+-   Multi-Level Page Table
+-   Inverted Page Table
+-   Hashed Page Table (overview)
+
+## Other Concepts
+
+-   Copy-on-Write (COW)
+-   Memory-Mapped Files (mmap)
+-   Working Set Model
+-   Local Page Replacement
+-   Global Page Replacement
+-   Effective Access Time (EAT)
+
+# 4. Advanced File Systems
+
+## Internal Structures
+
+-   Boot Block
+-   Superblock
+-   File Descriptors
+-   Virtual File System (VFS)
+
+## File Management
+
+-   Mounting
+-   Unmounting
+-   Hard Links
+-   Soft (Symbolic) Links
+-   Access Control Lists (ACL)
+
+# 5. Advanced I/O System
+
+## I/O Techniques
+
+-   Programmed I/O
+-   Interrupt-Driven I/O
+-   DMA I/O
+
+## Communication Styles
+
+-   Polling
+-   Synchronous I/O
+-   Asynchronous I/O
+-   Blocking I/O
+-   Non-Blocking I/O
+
+# 6. Advanced Protection & Security
+
+## Protection
+
+-   Protection Domains
+-   Access Matrix
+-   Capability Lists
+
+## Security
+
+-   Security Policies
+-   Secure Boot
+-   Trusted Platform Module (TPM)
+
+# 7. Modern Operating System Concepts
+
+## Hardware & Memory
+
+-   NUMA (Non-Uniform Memory Access)
+
+## Virtualization
+
+-   Hypervisors
+    -   Type 1
+    -   Type 2
+
+## Linux Internals
+
+-   Linux Kernel Modules
+-   cgroups
+-   Namespaces
+
+## Containers
+
+-   Container Internals
+-   Docker Architecture
+
+## Modern Platforms
+
+-   Windows Subsystem for Linux (WSL)
+-   Android Architecture
+-   iOS Architecture
+
+# 8. Advanced Academic Topics
+
+-   Demand Segmentation
+-   Segmented Paging
+-   Working Set Algorithm
+-   Clock-Pro Algorithm
+-   Huge Pages
+-   Buddy vs Slab Allocator (comparison)
+-   Extent-Based Allocation
+-   Journaling Internals
+-   Log-Structured File Systems
+-   Distributed File Systems
+-   Network File System (NFS)
+-   Andrew File System (AFS)
+-   Distributed Operating Systems
+-   Cluster Operating Systems
+-   Embedded Operating Systems
+-   Mobile Operating Systems
+
+# 9. Real-Time Operating Systems
+
+## Scheduling Algorithms
+
+-   Rate Monotonic Scheduling (RMS)
+-   Earliest Deadline First (EDF)
+
+## Characteristics
+
+-   Deterministic execution
+-   Low latency
+-   Predictable response
+-   Deadline guarantees
+
+# 10. Optional Deep-Dive Topics
+
+These are generally beyond placement interview requirements but useful
+for advanced study.
+
+-   Exokernel
+-   Nanokernel
+-   Capability-Based Operating Systems
+-   Scheduler Activations
+-   Linux Completely Fair Scheduler (CFS)
+-   Windows NT Architecture Internals
+-   ext4 Internal Design
+-   Mach Kernel IPC
+-   Barrelfish Operating System
+-   Firecracker MicroVMs
+
+# Recommended Study Order
+
+1.  Fundamentals
+2.  Processes & Threads
+3.  CPU Scheduling
+4.  Synchronization
+5.  Deadlocks
+6.  Memory Management
+7.  Virtual Memory
+8.  File Systems
+9.  Disk & I/O
+10. Linux
+11. Security
+12. Modern OS Concepts
+13. Advanced Topics (optional)
+
 
 
