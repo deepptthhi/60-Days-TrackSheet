@@ -1,75 +1,95 @@
-# Day 29 - Learning Authentication & Authorization using JWT
+# Day 30 - Learning REST APIs with Express.js
 
 ## What did I learn?
 
-Today I learned one of the most essential concepts in backend development—**Authentication and Authorization**. Until now, all the APIs I built were open, meaning anyone could send a request and access them. Today I finally understood how real-world applications identify users, keep them logged in, and make sure only the right people can access certain features.
+Today I learned one of the most important topics in backend development **REST APIs**. Before today, I knew how to create routes in Express, but I didn't really understand how a frontend application communicates with the backend. After today's learning, everything started connecting together, and I could finally see the complete picture of how a request travels from the client to the server and back.
 
-One of the first things I learned was the difference between **Authentication** and **Authorization**. In the beginning, both terms sounded almost identical to me, and I often mixed them up. But after going through examples, I realized that authentication is simply proving who you are, while authorization is deciding what you're allowed to do after you've been identified. That small difference made the whole login process much easier to understand.
+The first thing I understood was what an **API (Application Programming Interface)** actually is. Earlier, I always heard people say, "Create an API" or "Call an API," but I never thought deeply about what it really meant. Today I realized that an API is simply a bridge that allows two applications to communicate. Whenever we use an app like Instagram or Amazon, the frontend doesn't directly access the database. Instead, it sends a request to the backend through an API, the backend processes the request, fetches the required data, and sends the response back.
 
-I also learned why developers never store passwords directly in the database. Before today, I knew passwords were "encrypted," but I didn't really understand how it worked. I learned about **bcrypt**, which hashes passwords before storing them. What surprised me the most was that hashed passwords can't be converted back into the original password. Instead, when a user logs in, the entered password is hashed again and compared with the stored hash. That made me realize how seriously applications take user security.
+I also learned about **REST (Representational State Transfer)** and why almost every modern application follows REST principles. I understood that REST is not a technology but a set of rules for designing APIs in a clean and organized way. Instead of creating random URLs, APIs are designed around resources like users, products, or orders, making them easier for developers to understand and maintain.
 
-Another concept that really clicked for me today was **JWT (JSON Web Token)**. I had always wondered how websites remember that I'm logged in even after refreshing the page or opening another tab. Now I understand that once the user logs in successfully, the server creates a token and sends it back to the client. Every future request includes this token, allowing the server to recognize the user without asking them to log in again. It finally connected all the pieces together for me.
+One of the biggest things I learned today was the purpose of different **HTTP methods**. Until now, I knew the names GET and POST, but I wasn't very confident about when each one should be used. Today I learned that GET is used to retrieve data, POST is used to create new data, PUT replaces an existing resource, PATCH updates only selected fields, and DELETE removes data. Once I connected these methods with CRUD operations, they became much easier to remember.
 
-I also walked through the complete **registration and login flow**, starting from creating a user account, hashing the password, storing it in MongoDB, comparing passwords during login, generating a JWT, and finally protecting routes using authentication middleware. Seeing the entire process step by step helped me understand how everything works together instead of learning each concept separately.
+Another concept that finally became clear was **API endpoints**. Earlier, every route looked almost the same to me, but now I understand that each endpoint represents a specific resource or action. For example, `/users` returns all users, while `/users/:id` returns details of a single user. This made me realize that designing APIs is more about organizing resources than simply writing routes.
 
-Towards the end, I learned about **role-based authorization**. I understood that not every logged-in user should have the same permissions. For example, an admin can manage users or delete records, while a normal user can only access their own profile. This showed me that logging in is only the first step—the application also needs to decide what each user is allowed to do.
+I also spent time understanding the difference between **Route Parameters** and **Query Parameters**. At first, I found them confusing because both appear in the URL. After practicing a few examples, I realized that route parameters identify a specific resource, while query parameters are mainly used for filtering, searching, sorting, or pagination. That small difference cleared up a confusion I had for quite some time.
 
-By the end of today's learning, I realized that authentication isn't just about creating a login page. It's about building trust between the user and the application by protecting passwords, verifying identities, securing APIs, and making sure users only access what they're supposed to.
+Another important thing I learned was how the frontend sends data to the backend using the **request body**. I understood that when creating or updating data, the client sends information in JSON format, and Express converts that JSON into a JavaScript object using `express.json()`. Before today, I had used this middleware without really knowing why it was needed. Now I understand its purpose much better.
+
+I also learned how the backend sends responses back to the client. Instead of simply returning text, most applications return **JSON** because it is lightweight, easy to read, and supported by almost every programming language. Understanding why JSON has become the standard format for communication made the entire request-response cycle much clearer.
+
+Towards the end, I learned about **HTTP status codes**. Earlier, I only knew that 404 meant "Page Not Found." Today I learned that status codes are much more meaningful than I thought. Codes like 200, 201, 400, 401, 403, 404, and 500 help the client understand whether the request was successful or if something went wrong. I realized that returning the correct status code is an important part of writing professional APIs.
+
+Finally, I built a simple REST API using Express.js and tested it using **Postman** and **Thunder Client**. Sending requests manually and seeing the responses helped me understand the complete lifecycle of an API much better than just reading theory. Watching the request go from the client, through the server, and back as a response made everything feel much more practical.
+
+By the end of today's learning, I realized that almost every modern application depends on REST APIs. Whether it's a website, a mobile application, or even communication between two backend services, APIs are the backbone that allows everything to work together.
 
 ## What challenges did I face?
 
-The biggest challenge today was understanding how all the different pieces fit together. I knew about passwords, JWT, and middleware individually, but at first I couldn't visualize the complete flow. After tracing the process from user registration to accessing a protected route, everything finally started making sense.
+The biggest challenge today was understanding how all the concepts fit together. I already knew about routes, JSON, and HTTP methods separately, but I couldn't clearly picture the complete flow of a request. Once I followed the journey from the client sending a request to the server processing it and returning a response, everything started making much more sense.
 
-I also found it a little confusing to understand the difference between **hashing** and **encryption**. Initially, I thought both meant hiding data. After learning more, I realized that hashing is a one-way process mainly used for passwords, while encryption allows data to be decrypted when needed.
+I also found it slightly confusing to differentiate between **Route Parameters** and **Query Parameters** because both are part of the URL. After trying multiple examples, I finally understood when each one should be used.
 
-Another small challenge was understanding where JWT verification actually happens. I first assumed every route would need to verify the token manually, but learning about authentication middleware showed me how one middleware can automatically protect multiple routes, making the application much cleaner and easier to maintain.
+Another small challenge was remembering which HTTP method matches which CRUD operation. Initially, I had to think twice before choosing between PUT and PATCH, but after enough examples, the differences became much clearer.
 
 ## What new concepts did I understand?
 
-### Authentication
+### API
 
-I learned that authentication is the process of verifying a user's identity before allowing them to access an application.
+I learned that an API acts as a bridge that allows different applications to communicate with each other.
 
-### Authorization
+### REST
 
-I understood that authorization determines what an authenticated user is allowed to access or perform inside the application.
+I understood that REST is a standard way of designing APIs so they remain simple, organized, and easy to maintain.
 
-### bcrypt
+### HTTP Methods
 
-I learned that bcrypt securely hashes passwords before storing them, making it extremely difficult for attackers to obtain the original passwords even if the database is compromised.
+I learned how GET, POST, PUT, PATCH, and DELETE are used to perform different operations on data.
 
-### Password Hashing
+### CRUD Operations
 
-I understood why passwords should always be hashed instead of stored as plain text and how hashing improves application security.
+I understood how Create, Read, Update, and Delete operations directly map to different HTTP methods.
 
-### JSON Web Token (JWT)
+### API Endpoints
 
-I learned that JWT allows users to stay logged in by securely identifying them through a signed token that is sent with every request.
+I learned that every endpoint represents a specific resource or functionality within an application.
 
-### Authentication Middleware
+### Route Parameters
 
-I learned how middleware automatically verifies JWT tokens before allowing access to protected APIs, making authentication reusable across the application.
+I understood that route parameters identify a particular resource using values inside the URL.
 
-### Role-Based Authorization
+### Query Parameters
 
-I understood how applications provide different permissions to different users based on their roles, such as Admin or User.
+I learned that query parameters are mainly used for filtering, searching, sorting, and pagination.
+
+### Request Body
+
+I understood how the client sends JSON data to the backend and how Express accesses it through `req.body`.
+
+### HTTP Status Codes
+
+I learned why returning meaningful status codes is important for both developers and frontend applications.
+
+### API Testing
+
+I learned how tools like Postman and Thunder Client help developers test APIs before integrating them with the frontend.
 
 ## What computer/software engineering fundamentals did I learn today?
 
-Today's learning made me realize that backend development isn't only about building APIs—it is also about protecting them. Even the best application becomes vulnerable if anyone can access its private routes.
+Today's learning helped me understand that APIs are one of the core building blocks of software engineering. Almost every application today depends on APIs to exchange information between different systems.
 
-I learned that security should always be considered while designing backend systems. Hashing passwords, verifying user identities, protecting sensitive routes, and controlling user permissions are all essential parts of building reliable applications.
+I also realized that writing a working API isn't enough. Good API design means using meaningful endpoints, choosing the correct HTTP methods, returning proper status codes, and keeping communication between the frontend and backend clean and consistent.
 
-I also understood why authentication logic is usually placed inside middleware. It keeps the code organized, avoids repetition, and follows the principle of writing reusable components, which is an important software engineering practice.
+Another important thing I understood is that frontend and backend are designed to work independently. The frontend focuses on the user interface, while the backend handles business logic and data. APIs connect these two layers without tightly coupling them together.
 
 ## What changed in my thinking?
 
-Before today, I thought logging into an application was simply about checking whether the email and password were correct.
+Before today, I used to think APIs were just Express routes that returned some data.
 
-After learning today's concepts, I realized that there is an entire security process happening behind the scenes. Passwords are hashed before being stored, JWT tokens are generated after successful login, middleware verifies every protected request, and authorization ensures that users can only perform actions they have permission for.
+After today's learning, I realized that APIs are actually well-designed communication interfaces that define how applications talk to each other. Every request follows a proper structure using HTTP methods, endpoints, request bodies, JSON responses, and status codes.
 
-The biggest realization for me today was that authentication and authorization are the backbone of secure backend applications. Without them, any application would be vulnerable, no matter how well the rest of the code is written.
+The biggest realization for me today was that building good APIs isn't just about making things work, it's about making them predictable, organized, and easy for other developers to use.
 
 ## Today's One Line Summary
 
-> **"Today I learned how backend applications securely identify users using bcrypt and JWT, protect APIs with authentication middleware, and control access through authorization, making applications secure, reliable, and ready for real-world use."**
+> **"Today I learned how REST APIs allow the frontend and backend to communicate using HTTP requests, JSON, and proper API design, helping me understand how modern web applications work behind the scenes."**
